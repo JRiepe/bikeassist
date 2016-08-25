@@ -152,6 +152,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
         /*
          * Package Service Providers...
          */
