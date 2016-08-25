@@ -54,11 +54,14 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
+            /*'host' => env('DB_HOST', 'localhost'),*/
+            'host' => env('DB_HOST', 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'bikeassist'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'Imagineer1*'),
+            /*'username' => env('DB_USERNAME', 'root'),*/
+            'username' => env('DB_USERNAME', 'n9vbdkcfd3mvdtag'),
+            /*'password' => env('DB_PASSWORD', 'Imagineer1*'),*/
+            'password' => env('DB_PASSWORD', 'uzbs3rj4a4wadfjv'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
