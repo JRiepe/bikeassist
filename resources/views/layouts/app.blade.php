@@ -18,11 +18,12 @@
     <style>
         body {
             font-family: 'Lato';
+            color: black;
         }
 
         .fa-btn {
             margin-right: 6px;
-            color: white;
+            
         }
 
         /*.topRow {
@@ -30,16 +31,22 @@
             
         }
         */
-        .theBanner {
-            background-color: maroon;
-            color: white !important;
+        .theBanner  {
+            background-color: #ffb54d;
+            
         }
+
+        .theBack  {
+            background-color: #e6e6e6;
+            
+        }
+
     </style>
 </head>
-<body id="app-layout">
+<body id="app-layout" class="theBack">
     <nav class="navbar navbar-default navbar-static-top theBanner">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header theBanner">
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed theBanner" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -57,7 +64,7 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav theBanner">
+                <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                 </ul>
 
