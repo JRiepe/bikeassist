@@ -58,7 +58,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand theBanner" href="{{ url('/') }}">
-                    Bike Assist
+                    
                 </a>
             </div>
 
@@ -66,6 +66,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/trail') }}">Bike Trails</a></li>
+                    <li><a href="{{ url('/ride') }}">Your Ride</a></li>
+                    <li><a href="{{ url('/chart') }}">Chart your Ride</a></li>
+                    <li><a href="{{ url('/about') }}">About</a></li>
+                    <li><a href="{{ url('mailto:johnriepe@gmail.com') }}">Contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
