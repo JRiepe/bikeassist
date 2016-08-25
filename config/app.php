@@ -107,11 +107,12 @@ return [
     | Available Settings: "single", "daily", "syslog", "errorlog"
     |
     */
+    'log' => 'errorlog',
 
-    'log' => env('APP_LOG', 'single'),
+    /*'log' => env('APP_LOG', 'single'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
-
+    */
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
