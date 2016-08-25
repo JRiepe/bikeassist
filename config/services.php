@@ -42,7 +42,7 @@ return [
     'facebook' => [
     'client_id' => '547716785437851',
     'client_secret' => '5dcf048c5356ce9460d50377d069feea',
-    'redirect' => 'http://localhost:8000/callback',
+    'redirect' => 'http://protected-fjord-43510.herokuapp.com/callback',
 ],
 
 ];
