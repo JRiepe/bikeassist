@@ -1,0 +1,8 @@
+<?php
+
+return  [
+
+	'FACEBOOK_CLIENT_ID' => '547716785437851',
+	'FACEBOOK_CLIENT_SECRET' => '5dcf048c5356ce9460d50377d069feea'
+
+];
