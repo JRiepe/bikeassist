@@ -57,7 +57,8 @@ return [
             /*'host' => env('DB_HOST', 'localhost'),*/
             'host' => env('DB_HOST', 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'bikeassist'),
+            /*'database' => env('DB_DATABASE', 'bikeassist'),*/
+            'database' => env('DB_DATABASE', 'mysql://n9vbdkcfd3mvdtag:uzbs3rj4a4wadfjv@d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/dl1diknbmfhlvjnn'),
             /*'username' => env('DB_USERNAME', 'root'),*/
             'username' => env('DB_USERNAME', 'n9vbdkcfd3mvdtag'),
             /*'password' => env('DB_PASSWORD', 'Imagineer1*'),*/
