@@ -17,11 +17,11 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/about', 'AboutController@about');
 
-Route::get('/chart', 'ChartController@chart');
+Route::get('/chart', 'ChartController@chart', ['middleware' => 'auth']);
 
 Route::get('/trail', 'TrailController@trail');
 
-Route::get('/ride', 'RideController@ride');
+Route::get('/ride', 'RideController@ride', ['middleware' => 'auth']);
 
 //Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
 
