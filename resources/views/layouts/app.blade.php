@@ -26,28 +26,61 @@
             
         }
 
-        /*.topRow {
-            background-color: skyblue;
-            
-        }
-        */
+       
         .theBanner  {
-            background-color: #ffb54d;
+            background-color: #000000;
+            color: skyblue;
+        }
+
+        .panel-heading {
+            background-color: #ffb54d!important;
+
+        }
+
+
+        .theBack  {
+            background-color: #e6e6e6!important;
             
         }
 
-        .theBack  {
-            background-color: #e6e6e6;
-            
+        .container  {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+              /* Negative indent footer by its height */
+            margin: 0 auto -30px;
+              /* Pad the bottom by footer height */
+            padding: 0 0 30px;
         }
+        
+        .footer {
+            
+            background-color: #000000;
+            color: skyblue;
+        }
+        
 
     </style>
 </head>
 <body id="app-layout" class="theBack">
-    <nav class="navbar navbar-default navbar-static-top theBanner">
+    <nav class="navbar navbar-inverse navbar-static-top theBanner">
         <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <a class="" href="{{ url('/') }}">
+                        <img src="{{ URL::asset('/images/bikeassist.png')}}" alt="Logo" height="75" width="75">
+                        
+                    </a>
+                    
+                </div>
+                <div class="col-md-11 text-left theBanner">
+                    <h2>Bike Assist</h2>
+                </div>
+            </div>
+            
             <div class="navbar-header theBanner">
 
+                
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed theBanner" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
@@ -81,11 +114,11 @@
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown theBanner">
-                            <a href="#" class="dropdown-toggle theBanner" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
-                            <ul class="dropdown-menu theBanner" role="menu">
+                            <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -96,6 +129,12 @@
     </nav>
 
     @yield('content')
+
+    <div class="footer navbar-fixed-bottom">
+        <div class="container text-center">
+            <p>&copy; 2016 John Riepe</p> 
+        </div>
+    </div>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>

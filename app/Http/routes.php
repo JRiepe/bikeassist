@@ -19,6 +19,10 @@ Route::get('/about', 'AboutController@about');
 
 Route::get('/chart', 'ChartController@chart');
 
+Route::get('/trail', 'TrailController@trail');
+
+Route::get('/ride', 'RideController@ride');
+
 //Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
 
 //Route::get('/auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
@@ -28,6 +32,7 @@ Route::get('/login', 'LoginController@login');
 Route::get('/redirect', 'SocialAuthController@redirect');
 
 Route::get('/callback', 'SocialAuthController@callback');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
