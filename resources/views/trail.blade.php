@@ -23,4 +23,3 @@ My Information
 	<!--<a href="/"><button type="button" class="btn btn-primary">Home</button></a>
 	<a href="/about"><button type="button" class="btn btn-primary">About</button></a>
 	-->
-@stop
