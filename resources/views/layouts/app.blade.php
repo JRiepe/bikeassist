@@ -60,8 +60,8 @@
         }
         
         .map-panel {
-            width: 400px;
-            height: 400px;
+            width: 380px;
+            height: 380px;
             align-content: center;
         }
     </style>

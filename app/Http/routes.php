@@ -21,6 +21,8 @@ Route::get('/chart', 'ChartController@chart', ['middleware' => 'auth']);
 
 Route::get('/trail', 'TrailController@trail');
 
+Route::get('/trailSearch', 'TrailController@trailSearch');
+
 Route::get('/ride', 'RideController@ride', ['middleware' => 'auth']);
 
 //Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');

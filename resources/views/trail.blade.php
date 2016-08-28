@@ -11,28 +11,25 @@ My Information
 		            <div class="panel panel-default">
 		                <div class="panel-heading">Trail</div>                		
 		                <div class="panel-body text-center">
-		                    <form>
-								<div className="form-group">
-									<h4><strong>Enter Location to Map</strong></h4>
-										<label>Search Term:</label>
-										<input type="text" className="form-control text-center" id="searchTerm"  value="Orlando"/>	
-										<button type="button" className="btn btn-primary" value={this.searchTerm}>Submit</button>
-								</div>
-
-							</form>
+		                    
+							<div class="col-md-6 form-group">
+				                    <h4>Search for a bike trail near you!</h4>
+				                    {!! Form::open(array('url' => '/trailSearch', 'method' => 'get')) !!}
+								    {!! Form::text('searchTerm') !!}
+								    {!! Form::submit('Submit')!!} 
+								    {!! Form::close() !!}								
+							</div>
+							<div class="col-md-6 map-panel">
+								{!! Mapper::render() !!}
+							</div>
 		                </div>
-		                <div class="panel-body text-center map-panel">
-							{!! Mapper::render() !!}
-						</div>
+		                
 		            </div>
 		        </div>
 		    </div>
 		    
 		</div>
 		
-		
 @stop
 	
-	<!--<a href="/"><button type="button" class="btn btn-primary">Home</button></a>
-	<a href="/about"><button type="button" class="btn btn-primary">About</button></a>
-	-->
+	
