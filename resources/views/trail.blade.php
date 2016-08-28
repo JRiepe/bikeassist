@@ -15,7 +15,7 @@ My Information
 							<div class="col-md-6 form-group">
 				                    <h4>Search for a bike trail near you!</h4>
 				                    {!! Form::open(array('url' => '/trailSearch', 'method' => 'get')) !!}
-								    {!! Form::text('searchTerm') !!}
+								    {!! Form::text('searchLocation') !!}
 								    {!! Form::submit('Submit')!!} 
 								    {!! Form::close() !!}								
 							</div>

@@ -20,8 +20,8 @@ class TrailController extends Controller
 
     public function trailSearch(Request $request) {
 		//flash('Charts Go Here');
-		$term = $request->input('searchTerm');
-		Mapper::location($term)->map(['zoom' => 11, 'center' => true, 'marker' => false, 'overlay' => 'BIKE']);
+		$searchLocation = $request->input('searchLocation');
+		Mapper::location($searchLocation)->map(['zoom' => 11, 'center' => true, 'marker' => false, 'overlay' => 'BIKE']);
 		$site_title = "Trails Page";
 	    return view('trail', compact('site_title', 'term'));
     }
