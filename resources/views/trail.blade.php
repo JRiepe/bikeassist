@@ -11,13 +11,15 @@ My Information
 		            <div class="panel panel-default">
 		                <div class="panel-heading">Trail</div>
 
-		                <div class="panel-body">
-		                    Your Application's Landing Page.
+		                <div class="panel-body map-panel">
+		                    {!! Mapper::render() !!}
 		                </div>
 		            </div>
 		        </div>
 		    </div>
 		</div>
+		
+		
 @endsection
 	
 	<!--<a href="/"><button type="button" class="btn btn-primary">Home</button></a>

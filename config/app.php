@@ -153,6 +153,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -213,6 +214,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Flash' => Laracasts\Flash\Flash::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+
 
     ],
 

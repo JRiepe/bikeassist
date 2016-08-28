@@ -59,7 +59,13 @@
             color: skyblue;
         }
         
+        #map {
+            height: 100%;
+        }
 
+        .map-panel {
+            height: 100%;
+        }
     </style>
 </head>
 <body id="app-layout" class="theBack">
