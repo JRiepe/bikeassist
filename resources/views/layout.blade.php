@@ -66,7 +66,7 @@
             </div>
 
             <div id="flashDiv">
-                @include('flash::message')
+                
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -83,10 +83,6 @@
         
             
         
-        <script>
-            
-            //$('#flash-overlay-modal').modal();
-            $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
-        </script>
+        
     </body>
 </html>
