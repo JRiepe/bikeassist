@@ -153,7 +153,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
-        /* Collective\Html\HtmlServiceProvider::class,*/
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -214,8 +214,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
-        /*'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,*/
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
 
     ],
