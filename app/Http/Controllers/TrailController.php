@@ -12,7 +12,7 @@ class TrailController extends Controller
 {
     public function trail() {
 		//flash('Charts Go Here');
-		Mapper::location('Orlando')->map(['zoom' => 15, 'center' => false, 'marker' => false, 'overlay' => 'BIKE', 'height' => 400, 'width' => 400]);
+		Mapper::location('Winter Garden Florida')->map(['zoom' => 11, 'center' => true, 'marker' => false, 'overlay' => 'BIKE']);
 		$site_title = "Trails Page";
 	    return view('trail', compact('site_title'));
     }
