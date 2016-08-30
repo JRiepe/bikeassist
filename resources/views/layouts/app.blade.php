@@ -78,7 +78,7 @@
                     
                 </div>
                 <div class="col-md-11 text-left theBanner">
-                    <h2>Bike Assist</h2>
+                    <h2>Find Bike Paths and Track your ride data.</h2>
                 </div>
             </div>
             
