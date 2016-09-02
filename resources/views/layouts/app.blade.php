@@ -66,7 +66,9 @@
         }
     </style>
 </head>
-<body id="app-layout" class="theBack">
+<body id="app-layout"  class="theBack" style="background-size: cover; background-repeat: no-repeat center center-fixed; background-image:url('/images/bikecover.png'); position:relative;">
+   
+    
     <nav class="navbar navbar-inverse navbar-static-top theBanner">
         <div class="container">
             <div class="row">
@@ -131,15 +133,17 @@
             </div>
         </div>
     </nav>
-
+    <!-- <div style="background-size: 100%; background-repeat: no-repeat; background-image:url('/images/cover.jpeg'); position:relative">
+    </div>
+    -->
     @yield('content')
-
+    
     <div class="footer navbar-fixed-bottom">
         <div class="container text-center">
             <p>&copy; 2016 John Riepe</p> 
         </div>
     </div>
-
+    
     <!-- JavaScripts -->
     
 

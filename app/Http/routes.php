@@ -23,11 +23,13 @@ Route::get('/trail', 'TrailController@trail');
 
 Route::get('/trailSearch', 'TrailController@trailSearch');
 
-Route::get('/ride', 'RideController@ride', ['middleware' => 'auth']);
+Route::GET('/ride', 'RideController@index', ['middleware' => 'auth']);
 
-//Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
+Route::POST('/ride', 'RideController@store', ['middleware' => 'auth']);
 
-//Route::get('/auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
+Route::PUT('/ride/{id}', 'RideController@edit', ['middleware' => 'auth']);
+
+Route::DELETE('/ride/{id}', 'RideController@destroy', ['middleware' => 'auth']);
 
 Route::get('/login', 'LoginController@login');
 

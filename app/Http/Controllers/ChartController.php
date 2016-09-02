@@ -27,7 +27,10 @@ class ChartController extends Controller
     public function chart() {	
 			//flash('Charts Go Here');
 			$site_title = "Chart Page";
-		    return view('chart', compact('site_title'));
+            $pastRides = DB::table('ride_data')
+                ->where('user_id', '=', Auth::user()->id)
+                ->get();
+		    return view('chart', compact('site_title', 'pastRides'));
     }
 }
 
