@@ -19,7 +19,7 @@ My Information
 		                    		<thead>
 					                  	<tr>
 					                      	<th data-field="rideDate">Date</th>
-					                      	<th data-field="rideTime">Time(h:mm)</th>
+					                      	<th data-field="rideTime">Time(minutes)</th>
 					                      	<th data-field="rideDistance">Distance(miles)</th>
 					                  	</tr>
 			                		</thead>
@@ -52,7 +52,7 @@ My Information
 		                    		<thead>
 					                  	<tr>
 					                      	<th data-field="rideDate">Date</th>
-					                      	<th data-field="rideTime">Time(h:mm)</th>
+					                      	<th data-field="rideTime">Time(minutes)</th>
 					                      	<th data-field="rideDistance">Distance(miles)</th>
 					                  	</tr>
 			                		</thead>
@@ -65,7 +65,7 @@ My Information
 											    <td>{{ $past->ride_distance }}</td>
 											    {!! Form::open(array('url' => '/ride/'.$past->id)) !!}
 											    {{ Form::hidden('_method', 'DELETE') }}
-											    <td>{!! Form::submit('Delete', array('class' => 'btn btn-danger'))!!}</td> 
+											    <td>{!! Form::submit('Delete', array('class' => 'btn btn-danger delete')) !!}</td> 
 										    	{!! Form::close() !!}
 										    	{!! Form::open(array('url' => '/ride/'.$past->id)) !!}
 										    	{{ Form::hidden('_method', 'PUT') }}
@@ -83,4 +83,9 @@ My Information
 		    	</div>
 		    </div>
 		</div>
+		<script>
+			$(document).on('submit', '.delete', function(){
+        		return confirm("Do you want to delete this item?");
+    		});
+		</script>
 @endsection

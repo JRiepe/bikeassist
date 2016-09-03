@@ -9,6 +9,7 @@ use App\Rides;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
+use App\Http\Requests\EditRides;
 use Carbon\Carbon;
 
 
@@ -31,8 +32,7 @@ class RideController extends Controller
      */
     public function index() {
 		$site_title = "Ride Page";
-        $rides = Rides::where('user_id', Auth::user()->id)
-                    ->get();
+        $rides = Rides::where('user_id', Auth::user()->id)->get();
 
         /*DB::table('ride_data')
                 ->where('user_id', '=', Auth::user()->id)
@@ -41,29 +41,16 @@ class RideController extends Controller
         
     }
 
-    public function store(Request $request) { 
+    public function store(EditRides $request) { 
         $rides = new Rides;
         $rides->user_id = Auth::user()->id;
         $rides->ride_date = $request->input('rideDate');
         $rides->ride_time = $request->input('rideTime');
         $rides->ride_distance = $request->input('rideDistance');
-        //$ridedata->created_at = \Carbon\Carbon::now()->format('Y-m-d H:i:s');
-        //$ridedata->updated_at => \Carbon\Carbon::now()->format('Y-m-d H:i:s');
+        
         
         $rides->save();    
-            
-            
-            
-            
-
-        /* DB::table('ride_data')->insert([
-            'user_id' => Auth::user()->id,
-            'ride_date' => $request->input('rideDate'),
-            'ride_time' => $request->input('rideTime'),
-            'ride_distance' => $request->input('rideDistance'),
-            'created_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
-            ]); */
+      
         return redirect('/ride');
         
     }
@@ -84,7 +71,7 @@ class RideController extends Controller
     }
 
     public function destroy($id) {
-        Rides::find($id)->delete($id);
+        Rides::find($id)->delete();
         
         
         return redirect('/ride');
