@@ -27,8 +27,9 @@ My Information
 				                    	<tr>
 						                 	{!! Form::open(array('url' => '/ride')) !!}
 										    <td>{!! Form::date('rideDate') !!}</td>
-										    <td>{!! Form::text('rideTime') !!}</td>
-										    <td>{!! Form::text('rideDistance') !!}</td>
+										    
+										    <td>{!! Form::selectRange('rideTime', 1, 360) !!}</td>
+										    <td>{!! Form::number('rideDistance') !!}</td>
 										    {{ Form::hidden('_method', 'POST') }}
 										    <td>{!! Form::submit('Submit', array('class' => 'btn btn-primary'))!!}</td> 
 										    {!! Form::close() !!}
