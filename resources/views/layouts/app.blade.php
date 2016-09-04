@@ -136,11 +136,9 @@
             </div>
         </div>
     </nav>
-    
-    @include('flash::message')
+    <div class='text-center'>@include('flash::message')
+    </div>
     @yield('content')
-    
-    
     <div class="footer navbar-fixed-bottom">
         <div class="container text-center">
             <p>&copy; 2016 John Riepe</p> 

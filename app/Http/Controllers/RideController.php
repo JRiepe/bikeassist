@@ -43,33 +43,32 @@ class RideController extends Controller
         $rides->ride_date = $request->input('rideDate');
         $rides->ride_time = $request->input('rideTime');
         $rides->ride_distance = $request->input('rideDistance');
-        
-        
         $rides->save();    
-        flash('Saved!', 'success');
+        flash('Record has been Saved!', 'success');
         return redirect('/ride');
         
     }
 
     public function edit($id) {
+        $toEdit = Rides::find($id);
+        return view('/edit', compact('site_title', 'toEdit'));
+    }
+
+    public function update(EditRides $request) {
         
-
-
-        /* DB::table('ride_data')
-            ->where('id', $id)
-            ->update([
-                'ride_date' => $request->input('rideDate'),
-                'ride_time' => $request->input('rideTime'),
-                'ride_distance' => $request->input('rideDistance'),
-                'updated_at' => \Carbon\Carbon::now()->format('Y-m-d H:i:s')
-                ]); */
-        return redirect('/ride');
+        $newrides = Rides::find($request->input('id'));
+        $newrides->ride_date = $request->input('rideDate');
+        $newrides->ride_time = $request->input('rideTime');
+        $newrides->ride_distance = $request->input('rideDistance');
+        $newrides->save();
+       
+        flash('Record has been Updated!', 'success');
+        return redirect('/ride');  
     }
 
     public function destroy($id) {
         Rides::find($id)->delete();
-        
-        
+        flash('Record has been Deleted!', 'success');
         return redirect('/ride');
     }
 

@@ -73,8 +73,8 @@ My Information
 											    {{ Form::hidden('_method', 'DELETE') }}
 											    <td>{!! Form::submit('Delete', array('class' => 'btn btn-danger delete')) !!}</td> 
 										    	{!! Form::close() !!}
-										    	{!! Form::open(array('url' => '/ride/'.$past->id)) !!}
-										    	{{ Form::hidden('_method', 'PUT') }}
+										    	{!! Form::open(array('url' => '/ride/edit/'.$past->id)) !!}
+										    	{{ Form::hidden('_method', 'GET') }}
 											    <td>{!! Form::submit('Update', array('class' => 'btn btn-warning'))!!}</td> 
 										    	{!! Form::close() !!}
 											</tr>
@@ -88,5 +88,9 @@ My Information
 		    	</div>
 		    </div>
 		</div>
-		
+		<script type="text/javascript">
+			$(".delete").on("submit", function(){
+        		return confirm("Do you want to delete this item?");
+    		});
+		</script>
 @endsection
