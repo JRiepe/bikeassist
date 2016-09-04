@@ -33,10 +33,6 @@ class RideController extends Controller
     public function index() {
 		$site_title = "Ride Page";
         $rides = Rides::where('user_id', Auth::user()->id)->get();
-
-        /*DB::table('ride_data')
-                ->where('user_id', '=', Auth::user()->id)
-                ->get();*/
         return view('/ride', compact('site_title', 'rides'));
         
     }
@@ -50,7 +46,7 @@ class RideController extends Controller
         
         
         $rides->save();    
-      
+        flash('Saved!', 'success');
         return redirect('/ride');
         
     }

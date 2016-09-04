@@ -154,6 +154,7 @@ return [
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
         /*
          * Package Service Providers...
          */

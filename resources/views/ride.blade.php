@@ -29,18 +29,23 @@ My Information
 										    <td>{!! Form::date('rideDate') !!}</td>
 										    
 										    <td>{!! Form::selectRange('rideTime', 1, 360) !!}</td>
-										    <td>{!! Form::number('rideDistance') !!}</td>
+										    <td>{!! Form::text('rideDistance') !!}</td>
 										    {{ Form::hidden('_method', 'POST') }}
-										    <td>{!! Form::submit('Submit', array('class' => 'btn btn-primary'))!!}</td> 
+										    <td>{!! Form::submit('Submit', array('class' => 'btn btn-primary')) !!}</td> 
 										    {!! Form::close() !!}
 							    		</tr>
 		                			</tbody>
 		                		</table>
-		                	</div>
+		                	
+								<!-- Errors go here! -->
+								<div class='text-center'><h4>{{ $errors->first('rideDate') }}</h4><h4>{{ $errors->first('rideTime') }}</h4><h4>{{ $errors->first('rideDistance') }}</h4>
+							    </div>
 
+		                	</div>
 		                </div>
 		            </div>
 		        </div>
+		    
 		    </div>
 		    <div class="row">
 		        <div class="col-md-10 col-md-offset-1">
@@ -74,7 +79,6 @@ My Information
 										    	{!! Form::close() !!}
 											</tr>
 										@endforeach
-										
 		                			</tbody>
 		                		</table>
 		                	</div>
@@ -84,9 +88,5 @@ My Information
 		    	</div>
 		    </div>
 		</div>
-		<script>
-			$(document).on('submit', '.delete', function(){
-        		return confirm("Do you want to delete this item?");
-    		});
-		</script>
+		
 @endsection

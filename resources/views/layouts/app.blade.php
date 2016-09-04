@@ -64,6 +64,9 @@
             height: 380px;
             align-content: center;
         }
+        img {
+            padding:    5px;
+        }
     </style>
 </head>
 <body id="app-layout"  class="theBack" style="background-size: cover; background-repeat: no-repeat center center-fixed; background-image:url('/images/bikecover.png'); position:relative;">
@@ -133,10 +136,10 @@
             </div>
         </div>
     </nav>
-    <!-- <div style="background-size: 100%; background-repeat: no-repeat; background-image:url('/images/cover.jpeg'); position:relative">
-    </div>
-    -->
+    
+    @include('flash::message')
     @yield('content')
+    
     
     <div class="footer navbar-fixed-bottom">
         <div class="container text-center">
@@ -149,6 +152,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
