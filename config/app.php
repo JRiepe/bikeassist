@@ -155,6 +155,7 @@ return [
         Cornford\Googlmapper\MapperServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
         /*
          * Package Service Providers...
          */

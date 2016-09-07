@@ -12,7 +12,8 @@
         "fideloper/proxy": "^3.1",
         "cornford/googlmapper": "2.*",
         "laravelcollective/html": "5.2.*",
-        "laracasts/flash": "^2.0"
+        "laracasts/flash": "^2.0",
+        "khill/lavacharts": "3.0.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
