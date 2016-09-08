@@ -38,39 +38,99 @@ class ChartController extends Controller
             $pastRides = Rides::where('user_id', Auth::user()->id)->orderBy('ride_date')->get();
             
             /* Create a DataTable for Lavacharts to Chart */
-            $rideTable = Lava::DataTable();
-            $rideTable->addDateColumn('Date')
+            $allTable = Lava::DataTable();
+            $allTable->addDateColumn('Date')
             ->addNumberColumn('Time')
-            ->addNumberColumn('Distance');
-
+            ->addNumberColumn('Distance')
+            ->addNumberColumn('Avg. Speed');
+           
             foreach ($pastRides as $pRides) {
-                $rideTable->addRow([$pRides['ride_date'], intval($pRides['ride_time']), floatval($pRides['ride_distance'])]);
+                
+                $speed = (floatval($pRides['ride_distance']))/(intval($pRides['ride_time'])/60);
+                
+                
+                $allTable->addRow([$pRides['ride_date'], intval($pRides['ride_time']), floatval($pRides['ride_distance']), $speed]);
             }
 
             /* Chart Code here */
 
-            Lava::LineChart('chart_Line', $rideTable, [
+            Lava::LineChart('chart_All', $allTable, [
+                'title' => 'Ride Time and Distance by Date',
                 'titleTextStyle' => [
                     'fontName' => 'Arial',
                     'fontColor' => 'blue'
                 ],
+                'lineWidth' => 5,
+                'legend' => [
+                    'position' => 'top'
+                ]
+            ]);
+            /* Chart 2 */
+            $timeTable = Lava::DataTable();
+            $timeTable->addDateColumn('Date')
+            ->addNumberColumn('Time(in min.)');
+            
+            foreach ($pastRides as $pRides) {
+                
+                
+                $timeTable->addRow([$pRides['ride_date'], $pRides['ride_time']]);
+            }
+
+
+            Lava::AreaChart('chart_Time', $timeTable, [
+                
+                'title' => 'Time per Ride',
+                'titleTextStyle' => [
+                    'fontName' => 'Arial',
+                    'fontColor' => 'blue'
+                ],
+                'lineWidth' => 5,
                 'legend' => [
                     'position' => 'top'
                 ]
             ]);
 
-            Lava::AreaChart('chart_Area', $rideTable, [
+            /* Chart 3 */
+            $distanceTable = Lava::DataTable();
+            $distanceTable->addDateColumn('Date')
+            ->addNumberColumn('Distance');
+            
+            foreach ($pastRides as $pRides) {
+                
+                
+                $distanceTable->addRow([$pRides['ride_date'],  floatval($pRides['ride_distance'])]);
+            }
+
+            Lava::AreaChart('chart_Distance', $distanceTable, [
+                'title' => 'Distance per Ride',
                 'titleTextStyle' => [
-                    'fontName' => 'Arial',
-                    'fontColor' => 'blue'
+                    'fontColor' => 'blue',
+                    'fontSize' => 14
                 ],
-                'legend' => [
-                    'position' => 'top'
-                ]
+                'lineWidth' => 5
+                
             ]);
 
+            /* Chart 4 */
+            $speedTable = Lava::DataTable();
+            $speedTable->addDateColumn('Date')
+            ->addNumberColumn('Avg. Speed');
+            
+            foreach ($pastRides as $pRides) {
+                $speed = floatval($pRides['ride_distance'])/(intval($pRides['ride_time'])/60);
+                
+                $speedTable->addRow([$pRides['ride_date'], $speed]);
+            }
 
-
+            Lava::AreaChart('chart_Speed', $speedTable, [
+                'title' => 'Average Speed per Ride',
+                'titleTextStyle' => [
+                    'fontColor' => 'blue',
+                    'fontSize' => 14
+                ],
+                'lineWidth' => 5
+                
+            ]);
 
 
             /* Send to chart.blade.php */

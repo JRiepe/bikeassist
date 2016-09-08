@@ -32,7 +32,7 @@ class RideController extends Controller
      */
     public function index() {
 		$site_title = "Ride Page";
-        $rides = Rides::where('user_id', Auth::user()->id)->get();
+        $rides = Rides::where('user_id', Auth::user()->id)->orderBy('ride_date', 'DESC')->get();
         return view('/ride', compact('site_title', 'rides'));
         
     }
