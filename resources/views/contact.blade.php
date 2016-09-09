@@ -15,6 +15,11 @@ My Information
 		                <div class="panel-body">
 		                    
 		                	<div class='text-center'><h4>{{ $errors->first('name') }}</h4><h4>{{ $errors->first('email') }}</h4><h4>{{ $errors->first('message') }}</h4>
+		                	@if (session('message'))
+							    <div class="alert alert-success">
+							        {{ session('message') }}
+							    </div>
+							@endif
 							</div>
 							<!-- /////////////////////////////////////////// -->
 							<div class="col-md-4">
@@ -23,7 +28,7 @@ My Information
 								<table class="table table-striped table-inverse align-left" style="width: auto; height: auto;">
 		                 
 				                    	
-						                 	{!! Form::open(array('url' => '/contact/store')) !!}
+						                 	{!! Form::open(array('url' => '/send')) !!}
 						                 	
 						                 	<p>{!! Form::label('name', 'Name') !!}</p>
 										    <p>{!! Form::text('name') !!}</p>

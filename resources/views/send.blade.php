@@ -2,8 +2,9 @@
 
 @section('content')
 		<div class="container">
-<h1>{{$title}}</h1>
-<p>{{$content}}</p>
+<p>Name: {{$title}}</p>
+<p>Email: {{$email}}</p>
+<p>Message: {{$content}}</p><br>
 
 		</div>
 @endsection	

@@ -13,7 +13,8 @@
         "cornford/googlmapper": "2.*",
         "laravelcollective/html": "5.2.*",
         "laracasts/flash": "^2.0",
-        "khill/lavacharts": "3.0.*"
+        "khill/lavacharts": "3.0.*",
+        "sendgrid/sendgrid": "~4.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

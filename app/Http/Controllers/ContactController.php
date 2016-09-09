@@ -14,6 +14,7 @@ class ContactController extends Controller
     
     public function create()
     {
+        
         return view('/contact');
     } 
 
@@ -21,34 +22,31 @@ class ContactController extends Controller
     {
     	
     	$title = $request->input('name');
+    	$email = $request->input('email');
         $content = $request->input('message');
 
-        Mail::send('send', ['title' => $title, 'content' => $content], function ($message)
+        /* Mail::send('send', ['title' => $title, 'email' => $email, 'content' => $content], function ($message)
         {
 
             $message->from('johnriepe@gmail.com', 'John Riepe');
 
-            $message->to('johnriepe@gmail.com');
+            
 
         });
+        return redirect('/contact')->with(flash('Thank you for contacting us. A representative will contact you shortly', 'success')); */
+        
 
-        return response()->json(['message' => 'Request completed']);
-
-
-
-
-    	/*Mail::to($request->input('email'))
-    		->send('send', array(
-	        	'name' => $request->input('name'),
-	            'email' => $request->input('email'),
-	            'user_message' => $request->input('message')),
+    	Mail::send('send', array(
+	        	'title' => $title,
+	            'email' => $email,
+	            'content' => $content),
     		function($message)	{
-		        $message->from('postmaster@app9250d1afae9949378e02be3880af87dd.mailgun.org');
-		        $message->to('postmaster@app9250d1afae9949378e02be3880af87dd.mailgun.org', 'Admin')->subject('Contact Us');
+		        $message->from('johnriepe@gmail.com');
+		        $message->to('johnriepe@gmail.com', 'Admin')->subject('Contact Us');
     		}); 
     		
     	
-   		return redirect()->to('/contact');
-   		//->with('message', 'Thanks for contacting us!'); */   
+   		return redirect('/contact')
+   		->with('message','Thanks for contacting us!');   
 	} // end function store
 } // end ContactController

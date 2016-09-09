@@ -57,11 +57,12 @@
             
             background-color: #000000;
             color: skyblue;
+            padding-bottom: 3px;
         }
         
         .map-panel {
             width: 380px;
-            height: 380px;
+            height: 350px;
             align-content: center;
         }
         img {
@@ -142,13 +143,13 @@
     <div class="footer navbar-fixed-bottom">
         <div class="container text-center">
             <p>&copy; 2016 John Riepe</p>
-            <nav class="navbar navbar-inverse theBanner">
+            
                 <tr>
                     <td><a href="https://www.facebook.com/jriepe"><button class='fa fa-facebook fa-2x theBanner'></button></a></td>
                     <td><a href="https://github.com/JRiepe"><button class='fa fa-github fa-2x theBanner'></button></a></td>
                     <td><a href="https://www.linkedin.com/in/jriepe"><button class='fa fa-linkedin fa-2x theBanner'></button></a></td>
                 </tr>
-            </nav>
+           
         </div>
     </div>
     
