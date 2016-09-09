@@ -21,12 +21,12 @@ My Information
 							    </div>
 							@endif
 							</div>
-							<!-- /////////////////////////////////////////// -->
+							
 							<div class="col-md-4">
 							</div>
 							<div class="col-md-4">
 								<table class="table table-striped table-inverse align-left" style="width: auto; height: auto;">
-		                 
+		              
 				                    	
 						                 	{!! Form::open(array('url' => '/send')) !!}
 						                 	
@@ -44,11 +44,6 @@ My Information
 		                	</div>
 		                	<div class="col-md-4">
 							</div>
-							
-
-							<!-- /////////////////////////////////////////// -->
-
-
 							
 		                </div>
 		            </div>

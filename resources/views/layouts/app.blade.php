@@ -72,7 +72,6 @@
 </head>
 <body id="app-layout"  class="theBack" style="background-size: cover; background-repeat: no-repeat center center-fixed; background-image:url('/images/bikecover.png'); position:relative;">
    
-    
     <nav class="navbar navbar-inverse navbar-static-top theBanner">
         <div class="container">
             <div class="row">
