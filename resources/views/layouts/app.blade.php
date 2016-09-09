@@ -112,7 +112,7 @@
                     <li><a href="{{ url('/ride') }}">Your Ride</a></li>
                     <li><a href="{{ url('/chart') }}">Chart your Ride</a></li>
                     <li><a href="{{ url('/about') }}">About</a></li>
-                    <li><a href="{{ url('mailto:johnriepe@gmail.com') }}">Contact</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -141,7 +141,14 @@
     @yield('content')
     <div class="footer navbar-fixed-bottom">
         <div class="container text-center">
-            <p>&copy; 2016 John Riepe</p> 
+            <p>&copy; 2016 John Riepe</p>
+            <nav class="navbar navbar-inverse theBanner">
+                <tr>
+                    <td><a href="https://www.facebook.com/jriepe"><button class='fa fa-facebook fa-2x theBanner'></button></a></td>
+                    <td><a href="https://github.com/JRiepe"><button class='fa fa-github fa-2x theBanner'></button></a></td>
+                    <td><a href="https://www.linkedin.com/in/jriepe"><button class='fa fa-linkedin fa-2x theBanner'></button></a></td>
+                </tr>
+            </nav>
         </div>
     </div>
     

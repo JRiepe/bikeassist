@@ -52,9 +52,9 @@ My Information
 			        <div class="panel panel-default">
 		                <div class="panel-heading">Your Ride History</div>
 
-		                <div class="panel-body">
-		                    <div class="table-responsive">
-		                    	<table class="table table-striped table-inverse">
+		                <div class="panel-body" style="height: auto;">
+		                    <div class="table-responsive" style="max-height: 800px;">
+		                    	<table class="table table-striped table-inverse" style="height: auto;">
 		                    		<thead>
 					                  	<tr>
 					                      	<th data-field="rideDate">Date</th>
@@ -88,9 +88,5 @@ My Information
 		    	</div>
 		    </div>
 		</div>
-		<script type="text/javascript">
-			$(".delete").on("submit", function(){
-        		return confirm("Do you want to delete this item?");
-    		});
-		</script>
+		
 @endsection

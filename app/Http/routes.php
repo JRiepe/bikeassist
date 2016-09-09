@@ -31,6 +31,9 @@ Route::GET('/ride/edit/{id}', 'RideController@edit', ['middleware' => 'auth']);
 
 Route::PUT('/ride/update/{id}', 'RideController@update', ['middleware' => 'auth']);
 
+Route::get('/contact', 'ContactController@create');
+
+Route::post('/send', 'ContactController@send');
 
 Route::DELETE('/ride/{id}', 'RideController@destroy', ['middleware' => 'auth']);
 
