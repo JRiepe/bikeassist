@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 465,
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'postmaster@app9250d1afae9949378e02be3880af87dd.mailgun.org', 'name' => 'John Riepe'],
+    'from' => ['address' => 'johnriepe@gmail.com', 'name' => 'John Riepe'],
 
     /*
     |--------------------------------------------------------------------------

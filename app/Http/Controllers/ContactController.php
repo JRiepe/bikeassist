@@ -27,7 +27,7 @@ class ContactController extends Controller
 	            'email' => $email,
 	            'content' => $content),
     		function($message)	{
-		        $message->from('johnriepe@gmail.com');
+		        
 		        $message->to('johnriepe@gmail.com', 'Admin')->subject('Contact Us');
     		});
    		return redirect('/contact')->with('message','Thanks for contacting us!');   
