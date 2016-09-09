@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', 'SENDGRID_USERNAME'),
+    'username' => 'SENDGRID_USERNAME',
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD', 'SENDGRID_PASSWORD'),
+    'password' => 'SENDGRID_PASSWORD',
 
     /*
     |--------------------------------------------------------------------------
