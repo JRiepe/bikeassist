@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- Title of Page -->
     <title>Bike Assist</title>
+    <!-- Logo in Tab -->
     <link rel="icon" sizes="16x16" href="/images/bikeassist.png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -14,75 +15,22 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
-    <style>
-        body {
-            font-family: 'Lato';
-            color: black;
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-            
-        }
-
-       
-        .theBanner  {
-            background-color: #000000;
-            color: skyblue;
-        }
-
-        .panel-heading {
-            background-color: #ffb54d!important;
-
-        }
-
-
-        .theBack  {
-            background-color: #e6e6e6!important;
-            
-        }
-
-        .container  {
-            
-            height: auto !important;
-            height: 100%;
-              /* Negative indent footer by its height */
-            margin: 0 auto -30px;
-              /* Pad the bottom by footer height */
-            padding: 0 0 30px;
-        }
-        
-        .footer {
-            
-            background-color: #000000;
-            color: skyblue;
-            padding-bottom: 3px;
-        }
-        
-        .map-panel {
-            width: 380px;
-            height: 350px;
-            align-content: center;
-        }
-        img {
-            padding:    5px;
-        }
-
-
-    </style>
+    
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">    
 </head>
-<body id="app-layout"  class="theBack" style="background-size: cover; background-repeat: no-repeat center center-fixed; background-image:url('/images/bikecover.png'); position:relative;">
+
+<body id="app-layout"  class="theBack">
    
+   <!-- Top Navigation Bar -->
+
     <nav class="navbar navbar-inverse navbar-static-top theBanner">
         <div class="container">
             <div class="row">
                 <div class="col-md-1">
                     <a class="" href="{{ url('/') }}">
-                        <img src="{{ URL::asset('/images/bikeassist.png')}}" alt="Logo" height="75" width="75">
-                        
-                    </a>
-                    
+                        <img src="{{ URL::asset('/images/bikeassist.png')}}" alt="Logo" height="75" width="75">    
+                    </a>                   
                 </div>
                 <div class="col-md-11 text-left theBanner">
                     <h2>Find Bike Paths and Track your ride data.</h2>
@@ -137,10 +85,19 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> <!-- End Navbar      -->
+    
+    <!-- Flash Message -->
+
     <div class='text-center'>@include('flash::message')
     </div>
+    
+    <!-- Content from other blades goes here -->
+
     @yield('content')
+    
+    <!-- Footer -->
+
     <div class="footer navbar-fixed-bottom">
         <div class="container text-center">
             <p>&copy; 2016 John Riepe</p>

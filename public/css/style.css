@@ -1,0 +1,56 @@
+        body {
+            font-family: 'Lato';
+            color: black;
+            background-size: cover;
+            background-repeat: no-repeat center center-fixed;
+            background-image:url('/images/bikecover.png');
+            position:relative;"
+        }
+
+        .fa-btn {
+            margin-right: 6px;
+            
+        }
+
+       
+        .theBanner  {
+            background-color: #000000;
+            color: skyblue;
+        }
+
+        .panel-heading {
+            background-color: #ffb54d!important;
+
+        }
+
+
+        .theBack  {
+            background-color: #e6e6e6!important;
+            
+        }
+
+        .container  {
+            
+            height: auto !important;
+            height: 100%;
+              /* Negative indent footer by its height */
+            margin: 0 auto -30px;
+              /* Pad the bottom by footer height */
+            padding: 0 0 30px;
+        }
+        
+        .footer {
+            
+            background-color: #000000;
+            color: skyblue;
+            padding-bottom: 3px;
+        }
+        
+        .map-panel {
+            width: 380px;
+            height: 350px;
+            align-content: center;
+        }
+        img {
+            padding:    5px;
+        }
