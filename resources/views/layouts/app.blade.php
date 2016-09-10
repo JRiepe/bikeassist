@@ -68,6 +68,8 @@
         img {
             padding:    5px;
         }
+
+
     </style>
 </head>
 <body id="app-layout"  class="theBack" style="background-size: cover; background-repeat: no-repeat center center-fixed; background-image:url('/images/bikecover.png'); position:relative;">
