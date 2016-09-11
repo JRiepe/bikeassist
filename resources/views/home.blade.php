@@ -20,25 +20,25 @@
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner" role="listbox">
 					    <div class="item active">
-					      <img src="/images/addride.png" href="{{ url('/ride') }}" alt="Add your latest ride">
+					      <a href="{{ url('/ride') }}"><img src="/images/addride.png" alt="Add your latest ride"></a>
 					      <div class="carousel-caption">
 					        ...
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/images/chartride.png" href="{{ url('/chart') }}" alt="Chart Rides">
+					      <a href="{{ url('/chart') }}"><img src="/images/chartride.png" alt="Chart Rides"></a>
 					      <div class="carousel-caption">
 					        ...
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/images/trailride.png" href="{{ url('/trail') }}" alt="Bike Trails">
+					      <a href="{{ url('/trail') }}"><img src="/images/trailride.png"  alt="Bike Trails"></a>
 					      <div class="carousel-caption">
 					        ...
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/images/mapride.png" href="{{ url('/trail') }}" alt="Find a Trail near you">
+					      <a href="{{ url('/trail') }}"><img src="/images/mapride.png"  alt="Find a Trail near you"></a>
 					      <div class="carousel-caption">
 					        ...
 					      </div>
@@ -62,8 +62,6 @@
     </div>
 </div>
 <script>
-	$('.carousel').carousel({
-	  interval: 2000
-	})
+	$('.carousel').carousel('cycle');
 </script>
 @endsection
