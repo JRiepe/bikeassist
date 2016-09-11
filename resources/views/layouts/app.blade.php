@@ -103,9 +103,9 @@
             <p>&copy; 2016 John Riepe</p>
             
                 <tr>
-                    <td><a href="https://www.facebook.com/jriepe" target="_blank"><button class='fa fa-facebook fa-2x theBanner'></button></a></td>
-                    <td><a href="https://github.com/JRiepe" target="_blank"><button class='fa fa-github fa-2x theBanner'></button></a></td>
-                    <td><a href="https://www.linkedin.com/in/jriepe" target="_blank"><button class='fa fa-linkedin fa-2x theBanner'></button></a></td>
+                    <td><a href="https://www.facebook.com/jriepe" target="_blank" alt='Facebook' data-toggle="tooltip" data-placement="top" title="Facebook"><button type='button' class='fa fa-facebook fa-2x theBanner'></button></a></td>
+                    <td><a href="https://github.com/JRiepe" target="_blank" alt='Github' data-toggle="tooltip" data-placement="top" title="Github"><button type='button' class='fa fa-github fa-2x theBanner'></button></a></td>
+                    <td><a href="https://www.linkedin.com/in/jriepe" target="_blank" alt='LinkedIn' data-toggle="tooltip" data-placement="top" title="LinkedIn"><button type='button' class='fa fa-linkedin fa-2x theBanner'></button></a></td>
                 </tr>
            
         </div>

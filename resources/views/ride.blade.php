@@ -69,10 +69,12 @@ My Information
 												<td>{{ $past->ride_date }}</td>
 											    <td>{{ $past->ride_time }}</td>
 											    <td>{{ $past->ride_distance }}</td>
+											    
 											    {!! Form::open(array('url' => '/ride/'.$past->id)) !!}
 											    {{ Form::hidden('_method', 'DELETE') }}
-											    <td>{!! Form::submit('Delete', array('class' => 'btn btn-danger delete', 'Onclick' => 'ConfirmDelete()')) !!}</td> 
+											    <td>{!! Form::submit('Delete', array('class' => 'btn btn-danger', 'id' => 'delete')) !!}</td> 
 										    	{!! Form::close() !!}
+										    	<!--<td><button class='btn btn-danger' id='delete' value="{{ url('/ride/'.$past->id) }}">Delete</button> -->
 										    	{!! Form::open(array('url' => '/ride/edit/'.$past->id)) !!}
 										    	{{ Form::hidden('_method', 'GET') }}
 											    <td>{!! Form::submit('Update', array('class' => 'btn btn-warning'))!!}</td> 
@@ -89,17 +91,6 @@ My Information
 		    </div>
 		</div>
 		<script>
-
-       function ConfirmDelete()
-       {
-           var x = confirm("Are you sure you want to delete?");
-           if (x) {
-               return true;
-           }
-           else {
-               return false;
-           }
-       }
-
-    </script>
+	
+    	</script>
 @endsection
