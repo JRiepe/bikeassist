@@ -59,13 +59,14 @@ My Information
 				navigator.geolocation.getCurrentPosition(showPosition);
 			} 
 			else {
-				flash('GPS Search not available for your device', 'danger');
+				alert('GPS Search not available for your device', 'danger');
 			}
 
 			function showPosition(position) {
 				document.getElementById("lat").value = position.coords.latitude;
 				document.getElementById("long").value = position.coords.longitude;
 				document.getElementById("geo").style.display = 'inline';
+				alert('Latitude: '+position.coords.latitude+', Longitude: '+position.coords.longitude, 'success');
 			}
 			
 			
