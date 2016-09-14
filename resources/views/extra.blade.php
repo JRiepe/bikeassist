@@ -93,7 +93,9 @@ My Information
 									{!! Form::close() !!}
 								</div>
 
-		
+		alert("Latitude: " + position.coords.latitude + 
+            " Longitude: " + position.coords.longitude); 
+				
 		
 @stop
 	

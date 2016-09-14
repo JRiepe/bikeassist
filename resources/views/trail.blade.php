@@ -65,9 +65,6 @@ My Information
 			function showPosition(position) {
 				document.getElementById("lat").value = position.coords.latitude;
 				document.getElementById("long").value = position.coords.longitude;
-				//alert("Latitude: " + position.coords.latitude + 
-            //" Longitude: " + position.coords.longitude); 
-				
 			}
 			
 			
