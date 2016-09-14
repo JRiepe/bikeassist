@@ -21,7 +21,7 @@ My Information
 								    {!! Form::submit('Submit', array('class' => 'btn btn-primary')) !!} 
 								    {!! Form::close() !!}
 								</div>								
-								<div>
+								<div id='geo' style="display: none;">
 										{!! Form::open(array('url' => '/geoSearch', 'method' => 'get')) !!}
 										{{ Form::hidden('latitude', '', array('id' => 'lat')) }}
 										{{ Form::hidden('longitude', '', array('id' => 'long')) }}
@@ -65,6 +65,7 @@ My Information
 			function showPosition(position) {
 				document.getElementById("lat").value = position.coords.latitude;
 				document.getElementById("long").value = position.coords.longitude;
+				document.getElementById("geo").style.display = 'inline';
 			}
 			
 			
