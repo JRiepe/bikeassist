@@ -15,12 +15,14 @@ My Information
 		                
 		                <div class="panel-body">
 		                	<div id="chart1-div" style="height: 400px; width: auto;"></div>
-		                    
-		                </div>
+		                	</div>
 		                <div class="panel-heading">Time per Ride</div>
 		                
 		                <div class="panel-body">
-		                	<div id="chart2-div" style="height: 400px; width: auto;"></div>
+		                	<div id="chart2-div" style="height: 400px; width: auto;">
+		                		<div id="chart2"></div>
+						        <div id="control2"></div>
+		                	</div>
 		                    
 		                </div>
 		                <div class="panel-heading">Distance per Ride</div>
@@ -39,6 +41,9 @@ My Information
 		        </div>
 		    </div>
 		</div>
+		<div id='demo'>
+		</div>
+		
 		{!!Lava::render('LineChart', 'chart_All', 'chart1-div')!!}
 		{!!Lava::render('AreaChart', 'chart_Time', 'chart2-div')!!}
 		{!!Lava::render('AreaChart', 'chart_Distance', 'chart3-div')!!}

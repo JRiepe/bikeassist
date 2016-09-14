@@ -65,6 +65,8 @@ class ChartController extends Controller
                     'position' => 'top'
                 ]
             ]);
+
+
             /* Chart 2 */
             $timeTable = Lava::DataTable();
             $timeTable->addDateColumn('Date')
@@ -77,7 +79,7 @@ class ChartController extends Controller
             }
 
 
-            Lava::AreaChart('chart_Time', $timeTable, [
+            $areaChart = Lava::AreaChart('chart_Time', $timeTable, [
                 
                 'title' => 'Time per Ride',
                 'titleTextStyle' => [
@@ -89,6 +91,25 @@ class ChartController extends Controller
                     'position' => 'top'
                 ]
             ]);
+
+///////////////////////////////////////////////////////////////////////////////////
+            // Test Controls
+
+            $filter  = Lava::DateRangeFilter(1, [
+                'ui' => [
+                    'filterColumnIndex' => 1,
+                    'showRangeValues' => true,
+                    'labelStacking' => 'vertical'
+                ]
+            ]);
+            $control = Lava::ControlWrapper($filter, 'control2');
+            $chart   = Lava::ChartWrapper($areaChart, 'chart2');
+            Lava::Dashboard('chart_Time')->bind($control, $chart);
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
 
             /* Chart 3 */
             $distanceTable = Lava::DataTable();

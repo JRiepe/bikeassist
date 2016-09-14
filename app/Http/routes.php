@@ -23,6 +23,8 @@ Route::get('/trail', 'TrailController@trail');
 
 Route::get('/trailSearch', 'TrailController@trailSearch');
 
+Route::get('/geoSearch', 'TrailController@geoSearch');
+
 Route::GET('/ride', 'RideController@index', ['middleware' => 'auth']);
 
 Route::POST('/ride', 'RideController@store', ['middleware' => 'auth']);

@@ -30,4 +30,17 @@ class TrailController extends Controller
 	    return view('trail', compact('site_title', 'searchLocation'));
     }
 
+    public function geoSearch(Request $request) {
+		//flash('Charts Go Here');$id = Input::get("id");
+		$lat = $request->input('latitude');
+		$long = $request->input('longitude');
+		$searchLocation = $request->input('searchLocation');
+		if (! $searchLocation){
+			$searchLocation = "Orlando";
+		}
+		Mapper::map($lat, $long, ['zoom' => 11, 'center' => true, 'marker' => false, 'overlay' => 'BIKE']);
+		$site_title = "Trails Page";
+	    return view('trail', compact('site_title', 'searchLocation'));
+    }
+
 }
