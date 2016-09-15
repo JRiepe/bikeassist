@@ -19,6 +19,8 @@ Route::get('/about', 'AboutController@about');
 
 Route::get('/chart', 'ChartController@chart', ['middleware' => 'auth']);
 
+Route::get('/stats', 'StatsController@index', ['middleware' => 'auth']);
+
 Route::get('/trail', 'TrailController@trail');
 
 Route::get('/trailSearch', 'TrailController@trailSearch');

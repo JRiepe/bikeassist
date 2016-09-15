@@ -59,8 +59,9 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('/trail') }}">Bike Trails</a></li>
-                    <li><a href="{{ url('/ride') }}">Your Ride</a></li>
-                    <li><a href="{{ url('/chart') }}">Chart your Ride</a></li>
+                    <li><a href="{{ url('/ride') }}">My Rides</a></li>
+                    <li><a href="{{ url('/stats') }}">My Stats</a></li>
+                    <li><a href="{{ url('/chart') }}">My Charts</a></li>
                     <li><a href="{{ url('/about') }}">About</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                 </ul>
