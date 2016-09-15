@@ -18,14 +18,15 @@ My Information
 				                    
 				                    {!! Form::open(array('url' => '/trailSearch', 'method' => 'get')) !!}
 								    {!! Form::text('searchLocation', $searchLocation) !!}
-								    {!! Form::submit('Submit', array('class' => 'btn btn-primary')) !!} 
+								    {!! Form::submit('Search', array('class' => 'btn btn-primary')) !!} 
 								    {!! Form::close() !!}
 								</div>								
 								<div id='geo' style="display: none;">
 										{!! Form::open(array('url' => '/geoSearch', 'method' => 'get')) !!}
 										{{ Form::hidden('latitude', '', array('id' => 'lat')) }}
 										{{ Form::hidden('longitude', '', array('id' => 'long')) }}
-										<td>{!! Form::submit('Search this Location', array('class' => 'btn btn-primary fa fa-crosshairs fa-2x')) !!}</td>
+										<br>
+										{!! Form::button('<i class="fa fa-crosshairs fa-lg"> Geo Search</i>', array('class' => 'btn btn-primary', 'type' => 'submit')) !!}
 										{!! Form::close() !!}
 								</div>
 
@@ -59,14 +60,14 @@ My Information
 				navigator.geolocation.getCurrentPosition(showPosition);
 			} 
 			else {
-				alert('GPS Search not available for your device', 'danger');
+				alert('GPS Search not available for your device');
 			}
 
 			function showPosition(position) {
 				document.getElementById("lat").value = position.coords.latitude;
 				document.getElementById("long").value = position.coords.longitude;
 				document.getElementById("geo").style.display = 'inline';
-				alert('Latitude: '+position.coords.latitude+', Longitude: '+position.coords.longitude, 'success');
+				alert('Latitude: '+position.coords.latitude+', Longitude: '+position.coords.longitude);
 			}
 			
 			

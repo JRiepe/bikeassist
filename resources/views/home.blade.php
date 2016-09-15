@@ -18,29 +18,29 @@
 					  </ol>
 
 					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-					    <div class="item active">
-					      <a href="{{ url('/ride') }}"><img src="/images/addride.png" alt="Add your latest ride"></a>
-					      <div class="carousel-caption">
-					        ...
-					      </div>
-					    </div>
-					    <div class="item">
-					      <a href="{{ url('/chart') }}"><img src="/images/chartride.png" alt="Chart Rides"></a>
-					      <div class="carousel-caption">
-					        ...
-					      </div>
-					    </div>
-					    <div class="item">
+					  <div class="carousel-inner" role="listbox">					    
+						<div class="item active">
 					      <a href="{{ url('/trail') }}"><img src="/images/trailride.png"  alt="Bike Trails"></a>
 					      <div class="carousel-caption">
-					        ...
+					        <h1 style='color: #000000;'>Map Bike Trails and Paths</h1> 
 					      </div>
 					    </div>
 					    <div class="item">
 					      <a href="{{ url('/trail') }}"><img src="/images/mapride.png"  alt="Find a Trail near you"></a>
 					      <div class="carousel-caption">
-					        ...
+					        <h1 style='color: #000000;'>Full Screen Maps of Trails and Paths</h1> 
+					      </div>
+					    </div>
+					    <div class="item">
+					      <a href="{{ url('/ride') }}"><img src="/images/addride.png" alt="Add your latest ride"></a>
+					      <div class="carousel-caption">
+					        <h1 style='color: #000000;'>Keep Track of Your Rides</h1>
+					      </div>
+					    </div>					    
+					    <div class="item">
+					      <a href="{{ url('/chart') }}"><img src="/images/chartride.png" alt="Chart Rides"></a>
+					      <div class="carousel-caption">
+					    	<h1 style='color: #000000;'>See Charts of Your Progress</h1> 
 					      </div>
 					    </div>
 					    ...
