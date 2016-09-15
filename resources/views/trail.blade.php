@@ -28,6 +28,7 @@ My Information
 										<br>
 										{!! Form::button('<i class="fa fa-crosshairs fa-lg"> Geo Search</i>', array('class' => 'btn btn-primary', 'type' => 'submit')) !!}
 										{!! Form::close() !!}
+
 								</div>
 
 								<div class='legend'>
@@ -67,7 +68,7 @@ My Information
 				document.getElementById("lat").value = position.coords.latitude;
 				document.getElementById("long").value = position.coords.longitude;
 				document.getElementById("geo").style.display = 'inline';
-				alert('Latitude: '+position.coords.latitude+', Longitude: '+position.coords.longitude);
+				$('#geo').append('Lat: '+position.coords.latitude+', Long: '+position.coords.longitude);
 			}
 			
 			
