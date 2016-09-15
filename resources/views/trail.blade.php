@@ -16,13 +16,13 @@ My Information
 				                <div>
 				                    <h4>Search for a bike trail near you!</h4>
 				                    
-				                    {!! Form::open(array('url' => '/trailSearch', 'method' => 'get')) !!}
+				                    {!! Form::open(array('secure_url' => '/trailSearch', 'method' => 'get')) !!}
 								    {!! Form::text('searchLocation', $searchLocation) !!}
 								    {!! Form::submit('Search', array('class' => 'btn btn-primary')) !!} 
 								    {!! Form::close() !!}
 								</div>								
 								<div id='geo' style="display: none;">
-										{!! Form::open(array('url' => '/geoSearch', 'method' => 'get')) !!}
+										{!! Form::open(array('secure_url' => '/geoSearch', 'method' => 'get')) !!}
 										{{ Form::hidden('latitude', '', array('id' => 'lat')) }}
 										{{ Form::hidden('longitude', '', array('id' => 'long')) }}
 										<br>

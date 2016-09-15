@@ -26,7 +26,7 @@
 					      </div>
 					    </div>
 					    <div class="item">
-					      <a href="{{ url('/trail') }}"><img src="/images/mapride.png"  alt="Find a Trail near you"></a>
+					      <a href="{{ secure_url('/trail') }}"><img src="/images/mapride.png"  alt="Find a Trail near you"></a>
 					      <div class="carousel-caption">
 					        <h1 style='color: #000000;'>Full Screen Maps of Trails and Paths</h1> 
 					      </div>
