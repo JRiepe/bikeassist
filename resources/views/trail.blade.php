@@ -68,7 +68,8 @@ My Information
 				document.getElementById("lat").value = position.coords.latitude;
 				document.getElementById("long").value = position.coords.longitude;
 				document.getElementById("geo").style.display = 'inline';
-				$('#geo').append('Lat: '+position.coords.latitude+', Long: '+position.coords.longitude);
+				$('#geo').append('Latitude: '+position.coords.latitude+'<br/>');
+				$('#geo').append('Longitude: '+position.coords.longitude);
 			}
 			
 			
