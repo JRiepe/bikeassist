@@ -20,7 +20,7 @@
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner" role="listbox">					    
 						<div class="item active">
-					      <a href="{{ url('/trail') }}"><img src="/images/trailride.png"  alt="Bike Trails"></a>
+					      <a href="{{ secure_url('/trail') }}"><img src="/images/trailride.png"  alt="Bike Trails"></a>
 					      <div class="carousel-caption">
 					        <h1 style='color: #000000;'>Map Bike Trails and Paths</h1> 
 					      </div>
