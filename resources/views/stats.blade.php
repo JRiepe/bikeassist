@@ -33,7 +33,7 @@ My Information
 		                <div class="panel-heading">{{ $data_title }}</div>
 		                    <div class="table-responsive" id="allData" style="display: inline; max-height: 800px;">
 		                    	
-							@if (count($all_rides) > 0)
+							
 		                    	<table class="table table-striped table-inverse" style="height: auto;">
 		               				<thead>
 					                  	<tr>
@@ -45,7 +45,7 @@ My Information
 					                      	<th data-field="avgspeed">Avg. Speed(mph)</th>
 					                  	</tr>
 			                		</thead>
-		               			
+		               		@if (count($all_rides) > 0)	
 		               				<tr>
 		               					<td>{{ $total_count }}</td>
 		               					<td>{{ $total_time }}</td>
@@ -55,10 +55,11 @@ My Information
 		               					<td>{{ round(($total_distance*60/$total_time), 1) }}</td>
 		             			
 		               				</tr>
+		               		@else
+							    <td>I don't have any records!</td>
+							@endif		
 		               			</table>
-							@else
-							    I don't have any records!
-							@endif
+							
 		                </div>
 					</div>   			
 		            <div class="panel panel-default">
