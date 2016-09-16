@@ -35,7 +35,7 @@ class StatsController extends Controller
         $site_title = "Ride Page";
         
         $all_rides = Rides::where('user_id', Auth::user()->id)->orderBy('ride_date', 'DESC')->get();
-        if ($all_rides === NULL) {
+        if (!$all_rides) {
             return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance', 'data_title'));
         }
         $total_count = $all_rides->count();
