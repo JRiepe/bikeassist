@@ -12,7 +12,7 @@ My Information
 		    <div class="row">
 		        <div class="col-md-10 col-md-offset-1">
 			        
-		                
+		            <div class="panel panel-default"> 
 		                <div class="panel-body" style="height: auto;">
 		                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
 								<div class="btn-group" role="group">
@@ -28,24 +28,25 @@ My Information
 								    <a href="{{ url('/stats/oneWeek') }}"><button type="button" class="btn btn-primary" id='oneWeekButton'>One Week</button></a>
 								</div>
 							</div>
-   
+   						</div> <!-- panel-body" -->
+   					</div> <!-- panel-default -->
+
 		            <div class="panel panel-default">
 		                <div class="panel-heading">{{ $data_title }}</div>
-		                    <div class="table-responsive" id="allData" style="display: inline; max-height: 800px;">
-		                    	
-							
+		                <div class="panel-body" style="height: auto;">	
+							@if (count($all_rides) > 0)
 		                    	<table class="table table-striped table-inverse" style="height: auto;">
 		               				<thead>
 					                  	<tr>
-					                      	<th data-field="totalcount">Total Rides</th>
-					                      	<th data-field="totaltime">Total Time(min.)</th>
-					                      	<th data-field="totaldistance">Total Distance(mi.)</th>
-					                      	<th data-field="avgtime">Avg. Time(min.)</th>
-					                      	<th data-field="avgdistance">Avg. Distance(mi.)</th>
-					                      	<th data-field="avgspeed">Avg. Speed(mph)</th>
+					                      	<th data-field="totalcount">Rides</th>
+					                      	<th data-field="totaltime">Total Time (min.)</th>
+					                      	<th data-field="totaldistance">Total Distance (mi.)</th>
+					                      	<th data-field="avgtime">Avg. Time (min.)</th>
+					                      	<th data-field="avgdistance">Avg. Distance (mi.)</th>
+					                      	<th data-field="avgspeed">Avg. Speed (mph)</th>
 					                  	</tr>
 			                		</thead>
-		               		@if (count($all_rides) > 0)	
+		               			
 		               				<tr>
 		               					<td>{{ $total_count }}</td>
 		               					<td>{{ $total_time }}</td>
@@ -55,23 +56,25 @@ My Information
 		               					<td>{{ round(($total_distance*60/$total_time), 1) }}</td>
 		             			
 		               				</tr>
+		               			</table>
 		               		@else
 							    <div class='text-center'>There are no records for the time period selected!</div>
-							@endif		
-		               			</table>
-							
-		                </div>
-					</div>   			
+							@endif
+		                </div> <!-- panel-body -->
+					</div>   <!-- panel-default	-->
+
 		            <div class="panel panel-default">
 		                <div class="panel-heading">{{ $data_title }}</div>
+		                <div class="panel-body" style="height: auto;">	
+								
 								<table class="table table-striped table-inverse" style="height: auto;">
 
 		                    		<thead>
 					                  	<tr>
 					                      	<th data-field="rideDate">Date</th>
-					                      	<th data-field="rideTime">Time(min.)</th>
-					                      	<th data-field="rideDistance">Distance(mi.)</th>
-					                      	<th data-field="rideSpeed">Avg. Speed(mph)</th>
+					                      	<th data-field="rideTime">Time (min.)</th>
+					                      	<th data-field="rideDistance">Distance (mi.)</th>
+					                      	<th data-field="rideSpeed">Avg. Speed (mph)</th>
 					                  	</tr>
 			                		</thead>
 		                    		<tbody>
@@ -87,15 +90,14 @@ My Information
 		                			</tbody>
 
 		                		</table>
-		                	</div>
-		                	<!-- End All Data -->
-			                
-			                
-			         	</div>
-			    	</div>
-		    	</div>
-		    </div>
-		</div>
+		                </div> <!-- panel-body -->
+		        
+			        </div> <!-- panel-default -->
+			    	
+		    	
+		    	</div> <!-- offset -->
+		    </div> <!-- row -->
+		</div> <!-- container -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
 
 		<script>
