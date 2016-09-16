@@ -30,7 +30,7 @@ My Information
 							</div>
    
 		            <div class="panel panel-default">
-		                <div class="panel-heading divTitle"></div>
+		                <div class="panel-heading">{{ $data_title }}</div>
 		                    <div class="table-responsive" id="allData" style="display: inline; max-height: 800px;">
 		                    	<table class="table table-striped table-inverse" style="height: auto;">
 		               				<thead>
@@ -57,7 +57,7 @@ My Information
 		                </div>
 					</div>   			
 		            <div class="panel panel-default">
-		                <div class="panel-heading divTitle"></div>
+		                <div class="panel-heading">{{ $data_title }}</div>
 								<table class="table table-striped table-inverse" style="height: auto;">
 
 		                    		<thead>
@@ -94,33 +94,7 @@ My Information
 
 		<script>
 
-			$('.divTitle').append('All Your Rides');
 			
-			$('#allButton').on('click', function() {
-				$('.divTitle').empty();
-				$('.divTitle').append('All Your Rides');
-				
-				
-			});
-
-			$('#monthButton').on('click', function() {
-				$('.divTitle').empty();
-				$('.divTitle').append('One Month of Data');
-				
-			});
-
-			$('#twoWeekButton').on('click', function() {
-				$('.divTitle').empty();
-				$('.divTitle').append('Two Weeks of Data');
-				
-			});
-
-			$('#oneWeekButton').on('click', function() {
-				$('.divTitle').empty();
-				$('.divTitle').append('One Week of Data');
-				
-			});
-
 
     	</script>
 @endsection

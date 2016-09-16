@@ -31,7 +31,8 @@ class StatsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function all() {
-		$site_title = "Ride Page";
+		$data_title = "All Your Rides";
+        $site_title = "Ride Page";
         
         $all_rides = Rides::where('user_id', Auth::user()->id)->orderBy('ride_date', 'DESC')->get();
         $total_count = $all_rides->count();
@@ -39,12 +40,13 @@ class StatsController extends Controller
         $total_distance = $all_rides->sum('ride_distance');
         
 
-        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance', 'data_title'));
 
         
     }
 
     public function month() {
+        $data_title = "One Month of Rides";
         $site_title = "Ride Page";
         
         
@@ -56,7 +58,7 @@ class StatsController extends Controller
         $total_distance = $all_rides->sum('ride_distance');
         
 
-        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance', 'data_title'));
 
         
 
@@ -64,6 +66,7 @@ class StatsController extends Controller
     }
 
     public function twoWeek() {
+        $data_title = "Two Weeks of Rides";
         $site_title = "Ride Page";
         
        
@@ -76,13 +79,14 @@ class StatsController extends Controller
         $total_distance = $all_rides->sum('ride_distance');
         
 
-        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance', 'data_title'));
         
 
         
     }
 
     public function oneWeek() {
+        $data_title = "One Week of Rides";
         $site_title = "Ride Page";
         
         
@@ -94,7 +98,7 @@ class StatsController extends Controller
         $total_distance = $all_rides->sum('ride_distance');
         
 
-        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));    
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance', 'data_title'));    
         
     }
 }
