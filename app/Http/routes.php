@@ -19,7 +19,13 @@ Route::get('/about', 'AboutController@about');
 
 Route::get('/chart', 'ChartController@chart', ['middleware' => 'auth']);
 
-Route::get('/stats', 'StatsController@index', ['middleware' => 'auth']);
+Route::get('/stats', 'StatsController@all', ['middleware' => 'auth']);
+
+Route::get('/stats/month', 'StatsController@month', ['middleware' => 'auth']);
+
+Route::get('/stats/twoWeek', 'StatsController@twoWeek', ['middleware' => 'auth']);
+
+Route::get('/stats/oneWeek', 'StatsController@oneWeek', ['middleware' => 'auth']);
 
 Route::get('/trail', 'TrailController@trail');
 

@@ -30,22 +30,71 @@ class StatsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function all() {
 		$site_title = "Ride Page";
         
-        $allrides = Rides::where('user_id', Auth::user()->id)->orderBy('ride_date', 'DESC')->get();
+        $all_rides = Rides::where('user_id', Auth::user()->id)->orderBy('ride_date', 'DESC')->get();
+        $total_count = $all_rides->count();
+        $total_time = $all_rides->sum('ride_time');
+        $total_distance = $all_rides->sum('ride_distance');
         
-        $monthrides = Rides::where('user_id', Auth::user()->id)->where('ride_date', '<=', Carbon::now())->where('ride_date', '>=', Carbon::now()->subMonths(1))->orderBy('ride_date', 'DESC')->get();
 
-        $twoweekrides = Rides::where('user_id', Auth::user()->id)->where('ride_date', '<=', Carbon::now())->where('ride_date', '>=', Carbon::now()->subWeeks(2))->orderBy('ride_date', 'DESC')->get();
-        
-        $oneweekrides = Rides::where('user_id', Auth::user()->id)->where('ride_date', '<=', Carbon::now())->where('ride_date', '>=', Carbon::now()->subWeeks(1))->orderBy('ride_date', 'DESC')->get();
-
-        return view('/stats', compact('site_title', 'allrides', 'monthrides', 'twoweekrides', 'oneweekrides'));
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));
 
         
     }
 
+    public function month() {
+        $site_title = "Ride Page";
+        
+        
+        
+        $all_rides = Rides::where('user_id', Auth::user()->id)->where('ride_date', '<=', Carbon::now())->where('ride_date', '>=', Carbon::now()->subMonths(1))->orderBy('ride_date', 'DESC')->get();
 
+        $total_count = $all_rides->count();
+        $total_time = $all_rides->sum('ride_time');
+        $total_distance = $all_rides->sum('ride_distance');
+        
 
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));
+
+        
+
+        
+    }
+
+    public function twoWeek() {
+        $site_title = "Ride Page";
+        
+       
+
+        $all_rides = Rides::where('user_id', Auth::user()->id)->where('ride_date', '<=', Carbon::now())->where('ride_date', '>=', Carbon::now()->subWeeks(2))->orderBy('ride_date', 'DESC')->get();
+        
+        
+        $total_count = $all_rides->count();
+        $total_time = $all_rides->sum('ride_time');
+        $total_distance = $all_rides->sum('ride_distance');
+        
+
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));
+        
+
+        
+    }
+
+    public function oneWeek() {
+        $site_title = "Ride Page";
+        
+        
+        
+        $all_rides = Rides::where('user_id', Auth::user()->id)->where('ride_date', '<=', Carbon::now())->where('ride_date', '>=', Carbon::now()->subWeeks(1))->orderBy('ride_date', 'DESC')->get();
+
+        $total_count = $all_rides->count();
+        $total_time = $all_rides->sum('ride_time');
+        $total_distance = $all_rides->sum('ride_distance');
+        
+
+        return view('/stats', compact('site_title', 'all_rides', 'total_count', 'total_time', 'total_distance'));    
+        
+    }
 }

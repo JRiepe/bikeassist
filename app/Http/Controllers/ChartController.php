@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Khill\Lavacharts\Lavacharts;
 use Khill\Lavacharts\Laravel\LavachartsFacade as Lava;
 
+
 class ChartController extends Controller
 {
     /**
@@ -40,9 +41,9 @@ class ChartController extends Controller
             /* Create a DataTable for Lavacharts to Chart */
             $allTable = Lava::DataTable();
             $allTable->addDateColumn('Date')
-            ->addNumberColumn('Time')
-            ->addNumberColumn('Distance')
-            ->addNumberColumn('Avg. Speed');
+            ->addNumberColumn('Time(minutes)')
+            ->addNumberColumn('Distance(miles)')
+            ->addNumberColumn('Avg. Speed(mph)');
            
             foreach ($pastRides as $pRides) {
                 
@@ -70,7 +71,7 @@ class ChartController extends Controller
             /* Chart 2 */
             $timeTable = Lava::DataTable();
             $timeTable->addDateColumn('Date')
-            ->addNumberColumn('Time(in min.)');
+            ->addNumberColumn('Time(minutes)');
             
             foreach ($pastRides as $pRides) {
                 
@@ -114,7 +115,7 @@ class ChartController extends Controller
             /* Chart 3 */
             $distanceTable = Lava::DataTable();
             $distanceTable->addDateColumn('Date')
-            ->addNumberColumn('Distance');
+            ->addNumberColumn('Distance(miles)');
             
             foreach ($pastRides as $pRides) {
                 
@@ -128,14 +129,17 @@ class ChartController extends Controller
                     'fontColor' => 'blue',
                     'fontSize' => 14
                 ],
-                'lineWidth' => 5
+                'lineWidth' => 5,
+                'legend' => [
+                    'position' => 'top'
+                ]
                 
             ]);
 
             /* Chart 4 */
             $speedTable = Lava::DataTable();
             $speedTable->addDateColumn('Date')
-            ->addNumberColumn('Avg. Speed');
+            ->addNumberColumn('Avg. Speed(mph)');
             
             foreach ($pastRides as $pRides) {
                 $speed = floatval($pRides['ride_distance'])/(intval($pRides['ride_time'])/60);
@@ -149,7 +153,10 @@ class ChartController extends Controller
                     'fontColor' => 'blue',
                     'fontSize' => 14
                 ],
-                'lineWidth' => 5
+                'lineWidth' => 5,
+                'legend' => [
+                    'position' => 'top'
+                ]
                 
             ]);
 

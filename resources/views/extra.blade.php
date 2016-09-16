@@ -99,4 +99,48 @@ My Information
 		
 @stop
 	
+
+	<script>
+
+			$('.divTitle').append('All Your Rides');
+			
+			$('#allButton').on('click', function() {
+				$('.divTitle').empty();
+				$('.divTitle').append('All Your Rides');
+				document.getElementById("monthData").style.display = 'none';
+				document.getElementById("twoWeekData").style.display = 'none';
+				document.getElementById("oneWeekData").style.display = 'none';
+				document.getElementById("allData").style.display = 'inline';
+				
+			});
+
+			$('#monthButton').on('click', function() {
+				$('.divTitle').empty();
+				$('.divTitle').append('One Month of Data');
+				document.getElementById("allData").style.display = 'none';
+				document.getElementById("twoWeekData").style.display = 'none';
+				document.getElementById("oneWeekData").style.display = 'none';
+				document.getElementById("monthData").style.display = 'inline';
+			});
+
+			$('#twoWeekButton').on('click', function() {
+				$('.divTitle').empty();
+				$('.divTitle').append('Two Weeks of Data');
+				document.getElementById("allData").style.display = 'none';
+				document.getElementById("monthData").style.display = 'none';
+				document.getElementById("oneWeekData").style.display = 'none';
+				document.getElementById("twoWeekData").style.display = 'inline';
+			});
+
+			$('#oneWeekButton').on('click', function() {
+				$('.divTitle').empty();
+				$('.divTitle').append('One Week of Data');
+				document.getElementById("allData").style.display = 'none';
+				document.getElementById("monthData").style.display = 'none';			
+				document.getElementById("twoWeekData").style.display = 'none'
+				document.getElementById("oneWeekData").style.display = 'inline';
+			});
+
+
+    	</script>
 	
