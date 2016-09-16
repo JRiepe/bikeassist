@@ -56,7 +56,7 @@ My Information
 		             			
 		               				</tr>
 		               		@else
-							    <td class='text-center'>There are no records for the time period selected!</td>
+							    <div class='text-center'>There are no records for the time period selected!</div>
 							@endif		
 		               			</table>
 							
