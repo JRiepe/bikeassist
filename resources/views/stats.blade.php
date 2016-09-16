@@ -47,8 +47,8 @@ My Information
 		               					<td>{{ $total_count }}</td>
 		               					<td>{{ $total_time }}</td>
 		               					<td>{{ $total_distance }}</td>
-		               					<td>{{ $total_time/$total_count }}</td>
-		               					<td>{{ $total_distance/$total_count }}</td>
+		               					<td>{{ round(($total_time/$total_count), 1) }}</td>
+		               					<td>{{ round(($total_distance/$total_count), 1) }}</td>
 		               					<td>{{ round(($total_distance*60/$total_time), 1) }}</td>
 		             			
 		               				</tr>
