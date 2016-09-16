@@ -19,7 +19,7 @@ Route::get('/about', 'AboutController@about');
 
 Route::get('/chart', 'ChartController@chart', ['middleware' => 'auth']);
 
-Route::get('/stats', 'StatsController@all', ['middleware' => 'auth']);
+Route::get('/stats', 'StatsController@index', ['middleware' => 'auth']);
 
 Route::get('/stats/month', 'StatsController@month', ['middleware' => 'auth']);
 

@@ -30,7 +30,7 @@ class StatsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function all() {
+    public function index() {
 		$data_title = "All Your Rides";
         $site_title = "Ride Page";
         
