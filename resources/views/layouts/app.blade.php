@@ -25,67 +25,71 @@
    <!-- Top Navigation Bar -->
 
     <nav class="navbar navbar-inverse navbar-static-top theBanner">
+                <div class="row" style='width: 100%;'> 
+                    <div class="col-md-2">
+                        <a class="" href="{{ url('/') }}">
+                            <img src="{{ URL::asset('/images/bikeassist.png')}}" alt="Logo" height="75" width="75">    
+                        </a>                   
+                    </div>
+                    <div class="col-md-10 text-left theBanner">
+                        <h2>Find Bike Paths and Track your Ride</h2>
+                    </div>
+                </div>
+
+
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-1">
-                    <a class="" href="{{ url('/') }}">
-                        <img src="{{ URL::asset('/images/bikeassist.png')}}" alt="Logo" height="75" width="75">    
-                    </a>                   
-                </div>
-                <div class="col-md-11 text-left theBanner">
-                    <h2>Find Bike Paths and Track your Ride</h2>
-                </div>
-            </div>
-            
-            <div class="navbar-header theBanner">
-
                 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed theBanner" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+            
+                <div class="navbar-header theBanner">
 
-                <!-- Branding Image -->
-                <a class="navbar-brand theBanner" href="{{ url('/') }}">
                     
-                </a>
-            </div>
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed theBanner" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand theBanner" href="{{ URL::asset('/images/bikeassist.png')}}">
+                        
+                    </a>
+                </div> <!-- navbar-header -->
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/trail') }}">Bike Trails</a></li>
-                    <li><a href="{{ url('/ride') }}">My Rides</a></li>
-                    <li><a href="{{ url('/stats') }}">My Stats</a></li>
-                    <li><a href="{{ url('/chart') }}">My Charts</a></li>
-                    <li><a href="{{ url('/about') }}">About</a></li>
-                    <li><a href="{{ url('/contact') }}">Contact</a></li>
-                </ul>
+                            <ul class="nav navbar-nav">
+                                <li><a href="{{ url('/home') }}">Home</a></li>
+                                <li><a href="{{ url('/trail') }}">Bike Trails</a></li>
+                                <li><a href="{{ url('/ride') }}">My Rides</a></li>
+                                <li><a href="{{ url('/stats') }}">My Stats</a></li>
+                                <li><a href="{{ url('/chart') }}">My Charts</a></li>
+                                <li><a href="{{ url('/about') }}">About</a></li>
+                                <li><a href="{{ url('/contact') }}">Contact</a></li>
+                            </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right theBanner">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown theBanner">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+                            <ul class="nav navbar-nav navbar-right theBanner">
+                                <!-- Authentication Links -->
+                                @if (Auth::guest())
+                                    <li><a href="{{ url('/login') }}">Login</a></li>
+                                    <li><a href="{{ url('/register') }}">Register</a></li>
+                                @else
+                                    <li class="dropdown theBanner">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                        </ul>
+                                    </li>
+                                @endif
                             </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </div>
+            </div> <!-- collapse navbar-collapse" id="app-navbar-collapse" -->
+        </div> <!-- container -->
     </nav> <!-- End Navbar      -->
     
     <!-- Flash Message -->
