@@ -23,14 +23,14 @@ class ContactController extends Controller
     	$title = $request->input('name');
     	$email = $request->input('email');
         $content = $request->input('message');
-        
+        $admin_email = 'johnriepe@gmail.com';
     	Mail::send('/send', array(
 	        	'title' => $title,
 	            'email' => $email,
 	            'content' => $content),
-    		function($message)	{
+    		function($message) use($admin_email) {
 		      
-		        $message->to(Auth::user()->email, 'Admin')->subject('Contact Us');
+		        $message->to($admin_email, 'Admin')->subject('Contact Us');
     		});
    		return redirect('/contact')->with('message','Thanks for contacting us!');   
 	} // end function store
