@@ -17,7 +17,13 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/about', 'AboutController@about');
 
-Route::get('/chart', 'ChartController@chart', ['middleware' => 'auth']);
+Route::get('/chart', 'ChartController@all', ['middleware' => 'auth']);
+
+Route::get('/chart/month', 'ChartController@month', ['middleware' => 'auth']);
+
+Route::get('/chart/twoWeek', 'ChartController@twoWeek', ['middleware' => 'auth']);
+
+Route::get('/chart/oneWeek', 'ChartController@oneWeek', ['middleware' => 'auth']);
 
 Route::get('/stats', 'StatsController@index', ['middleware' => 'auth']);
 

@@ -19,8 +19,8 @@ My Information
 		                    		<thead>
 					                  	<tr>
 					                      	<th data-field="rideDate">Date</th>
-					                      	<th data-field="rideTime">Time(minutes)</th>
-					                      	<th data-field="rideDistance">Distance(miles)</th>
+					                      	<th data-field="rideTime">Time (min.)</th>
+					                      	<th data-field="rideDistance">Distance (mi.)</th>
 					                  	</tr>
 			                		</thead>
 			                		<tbody>
@@ -58,8 +58,8 @@ My Information
 		                    		<thead>
 					                  	<tr>
 					                      	<th data-field="rideDate">Date</th>
-					                      	<th data-field="rideTime">Time(minutes)</th>
-					                      	<th data-field="rideDistance">Distance(miles)</th>
+					                      	<th data-field="rideTime">Time (min.)</th>
+					                      	<th data-field="rideDistance">Distance (mi.)</th>
 					                  	</tr>
 			                		</thead>
 		                    		<tbody>
@@ -71,13 +71,16 @@ My Information
 											    <td>{{ $past->ride_distance }}</td>
 											    
 											    {!! Form::open(array('url' => '/ride/'.$past->id)) !!}
+											    
 											    {{ Form::hidden('_method', 'DELETE') }}
 											    <td>{!! Form::submit('Delete', array('class' => 'btn btn-danger', 'id' => 'delete')) !!}</td> 
 										    	{!! Form::close() !!}
-										    	<!--<td><button class='btn btn-danger' id='delete' value="{{ url('/ride/'.$past->id) }}">Delete</button> -->
+										    	
 										    	{!! Form::open(array('url' => '/ride/edit/'.$past->id)) !!}
+										    	
 										    	{{ Form::hidden('_method', 'GET') }}
 											    <td>{!! Form::submit('Update', array('class' => 'btn btn-warning'))!!}</td> 
+										    	
 										    	{!! Form::close() !!}
 											</tr>
 										@endforeach

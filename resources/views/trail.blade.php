@@ -32,11 +32,11 @@ My Information
 								</div>
 
 								<div class='legend'>
-								<h4>Legend</h4><hr>
+								<h4>Map Legend</h6><hr>
 									<div class='inlegend'>
-										<p><span style='color: darkgreen; font-size: 28px;'>__</span> Dark green = multi-use trails (no motorized vehicles)</p>
-										<p><span style='color: limegreen; font-size: 28px;'>__</span> Light green = streets with bike lanes</p>
-										<p><span style='color: limegreen; font-size: 28px;'>...</span> Dashed green = other streets recommended for cyclists</p>
+										<p><span style='color: darkgreen; font-size: 14px;'>__</span> Dark green = multi-use trails (no motorized vehicles)</p>
+										<p><span style='color: limegreen; font-size: 14px;'>__</span> Light green = streets with bike lanes</p>
+										<p><span style='color: limegreen; font-size: 14px;'>...</span> Dashed green = other streets recommended for cyclists</p>
 									</div>
 								</div>
 							</div>
