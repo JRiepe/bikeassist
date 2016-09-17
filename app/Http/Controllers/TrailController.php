@@ -12,7 +12,7 @@ use App\Http\Requests;
 class TrailController extends Controller
 {
     public function trail() {
-		//flash('Charts if (! $searchTerm)
+		
 		$searchLocation = "";
 		Mapper::location("Orlando")->map(['zoom' => 11, 'center' => true, 'marker' => false, 'overlay' => 'BIKE']);
 		$site_title = "Trails Page";
@@ -20,7 +20,7 @@ class TrailController extends Controller
     }
 
     public function trailSearch(Request $request) {
-		//flash('Charts Go Here');
+		
 		$searchLocation = $request->input('searchLocation');
 		if (! $searchLocation){
 			$searchLocation = "Orlando";
@@ -31,7 +31,7 @@ class TrailController extends Controller
     }
 
     public function geoSearch(Request $request) {
-		//flash('Charts Go Here');$id = Input::get("id");
+		
 		$lat = $request->input('latitude');
 		$long = $request->input('longitude');
 		$searchLocation = $request->input('searchLocation');

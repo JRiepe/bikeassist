@@ -31,19 +31,5 @@ class EditRides extends Request
         ];
         
     }
-    // to customize error output we can make a messages field below
-    //
-    //public function messages()
-    //{
-    //    return [
-    //        'rideDate.required' => 'ERROR: :attribute is required',
-    //        'rideDate.before.tomorrow' => 'ERROR: :attribute can not be set for the future',
-    //        'rideTime.required' => 'ERROR: :attribute is required',
-    //        'rideDistance.required' => 'ERROR: :attribute is required',
-    //        'rideDistance.numeric' => 'ERROR: :attribute must be numeric ie.. 5.2',
-            
-    //    ];
-    //}
-
-    
+ 
 }

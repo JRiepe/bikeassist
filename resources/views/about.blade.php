@@ -15,12 +15,11 @@ My Information
 		                <div class="panel-body text-center">
 		            		<h3>Thank you for visiting Bike Assist.</h3>
 			                    <h4>This application was developed using Laravel's PHP framework.</h4>
-		            		<div class='col-md-3'></div>
-		                    <div class='col-md-6'>
-			                    
 			                    <h5>Programs I used during development:</h5>
-			                            
-				                    <ol class='text-left'>
+		            		<!-- <div class='col-md-4'></div> -->
+		                    <div class='col-md-6 col-md-offset-4'>
+		        
+				                    <ul class='text-left' style='list-style-type: none;'>
 					                    <li>Heroku</li>
 					                    <li>JawsDB</li>
 					                    <li>SendGrid</li>
@@ -29,7 +28,7 @@ My Information
 					                    <li>Laravel Collective</li>
 					                    <li>Lavacharts</li>
 					                    <li>Laracasts Flash</li>
-					                </ol>
+					                </ul>
 
 					        </div> <!-- col-md-6 -->
 
